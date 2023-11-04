@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Header Section */
+.header {
+    background-color: #1b3039;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 5px 10%;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 80px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar a {
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+}
+
+.header .navbar a:hover {
+    color: hsl(47, 100%, 50%);
+}
+
+@media (max-width: 780px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .header .navbar {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .navbar a{
+      margin-bottom: 10px;
+    }
+    
+
+    .header .logo {
+        margin-bottom: 10px;
+    }
+}
+
+/* Conteiner Section */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.descripcion-estudiante, .descripcion-traineer, .descripcion-junior {
+    padding: 20px;
+    height: 260px;
+    width: 260px;
+    text-align: center;
+    margin: 5px;
+    outline: none;
+}
+
+
+.descripcion-estudiante {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px #3d94c3;
+}
+
+.descripcion-traineer {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px #21a353;
+}
+
+.descripcion-junior {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px  #e4740c;
+}
+
+
+.descripcion-estudiante h3, .descripcion-traineer h3, .descripcion-junior h3 {
+    color: #000000;
+    font-size: 24px;
+}
+
+.descripcion-estudiante p, .descripcion-traineer p, .descripcion-junior p {
+    color: #000000;
+    margin-top: 10px;
+}
+
+.porcentaje {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        justify-content: center;
+    }
+
+    .descripcion-estudiante, .descripcion-traineer, .descripcion-junior {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Venta Section */
+.info-venta {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #e6e6e6;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(33, 33, 33, 0.788);
+}
+
+.info-venta p {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.info-venta .valor {
+    text-align: center;
+    color: #000000;
+    font-size: 40px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    width: 100%; 
+}
+
+.imput-correo .correo {
+    height: 40px;
+    width: 100%; 
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.input-container-nombre {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-container-nombre .input-container {
+    width: calc(50% - 5px); 
+}
+
+.input-container-nombre .input-container input {
+    width: 100%; 
+    margin: 0; /
+}
+
+.input-container-cc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-container-cc .input-container {
+    width: calc(50% - 5px); 
+}
+
+.input-container-cc .input-container input {
+    width: 100%; 
+}
+
+
+.input-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #747474;
+}
+
+.input-container input,
+.input-container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-container-correo .correo{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-container-total .total{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-container input:focus,
+.input-container select:focus {
+    border-color: #4CAF50;
+}
+
+.input-container-total input::placeholder {
+    color: white;
+}
+
+.input-container-total input {
+    color: white;
+    text-align: center;
+    background-color: #1cabfd;
+}
+
+/* Estilos para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .info-venta {
+        padding: 20px; 
+    }
+
+    .imput-correo .correo {
+        width: 100%;
+    }
+
+    .input-container {
+        width: 100%; 
+    }
+}
+
+
+
+.botones-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton-borrar,
+.boton-resumen {
+    width: 392px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.boton-borrar {
+    background-color: #02dd09;
+}
+
+.boton-resumen {
+    background-color: #02dd09;
+}
+
+.boton-borrar:hover {
+    background-color: #66cc6a;
+}
+
+.boton-resumen:hover {
+    background-color: #66cc6a;
+}
+
+.boton-borrar:focus,
+.boton-resumen:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .botones-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton-borrar,
+    .boton-resumen {
+        width: 50%;
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .info-venta {
+        max-width: 100%;
+    }
+
+}
+
+
+
+/* Footer Section */ 
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-top: 140px;
+    width: 100%;
+}
+
+.title5 {
+    font-size: 24px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-items a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .footer-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .footer-items a {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+.footer-items a:hover {
+    color: #0e6bce;
+}
